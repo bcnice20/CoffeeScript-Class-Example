@@ -15,12 +15,19 @@
     Content.prototype.div = function() {
       return $('<div id="content"></div>').appendTo('body');
     };
+    Content.prototype.text = function() {
+      $('<p>This is some text.</p>').appendTo('#content');
+      return $('<p>This is some more text.</p>').appendTo('#content');
+    };
     return Content;
   })();
   Footer = (function() {
     function Footer() {}
     Footer.prototype.div = function() {
       return $('<div id="footer"></div>').appendTo('body');
+    };
+    Footer.prototype.copyright = function() {
+      return $('<p>&copy 2011 Brad Carter</p>').appendTo('#footer');
     };
     return Footer;
   })();
@@ -29,4 +36,8 @@
   footer = new Footer;
   banner.div();
   banner.head();
+  content.div();
+  content.text();
+  footer.div();
+  footer.copyright();
 }).call(this);

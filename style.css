@@ -1,3 +1,16 @@
 #banner {
+  width: 780px;
+  height: 200px;
   text-align: center;
+}
+
+#content {
+  width: 780px;
+  height: 400px;
+  text-align: center;
+}
+
+#footer {
+  width: 780px;
+  height: 150px;
 }
