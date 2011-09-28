@@ -5,6 +5,10 @@ class Banner
   head: ->
     $('<h1 id="title">Welcome to my Site!!</h1>').appendTo('#banner')
 
+class Content
+
+class Footer
+
 banner = new Banner
 
 banner.div()
