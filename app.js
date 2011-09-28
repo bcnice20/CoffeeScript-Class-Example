@@ -1,5 +1,5 @@
 (function() {
-  var Banner, banner;
+  var Banner, Content, Footer, banner, content, footer;
   Banner = (function() {
     function Banner() {}
     Banner.prototype.div = function() {
@@ -10,7 +10,23 @@
     };
     return Banner;
   })();
+  Content = (function() {
+    function Content() {}
+    Content.prototype.div = function() {
+      return $('<div id="content"></div>').appendTo('body');
+    };
+    return Content;
+  })();
+  Footer = (function() {
+    function Footer() {}
+    Footer.prototype.div = function() {
+      return $('<div id="footer"></div>').appendTo('body');
+    };
+    return Footer;
+  })();
   banner = new Banner;
+  content = new Content;
+  footer = new Footer;
   banner.div();
   banner.head();
 }).call(this);
